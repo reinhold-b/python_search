@@ -50,10 +50,12 @@ Output: `3`
 
 Functionality
 -------------
-| Algorithm     | Needs sorted array           | speed  |
+| Algorithm     | Needs sorted array           | Speed  |
 | ------------- |:-------------:| -----:|
 | linear_search     | no| relatively slow |
 | bilinear_search    | no      |   relatively slow |
 | binary_search | yes     |  fast |
 | jump_search     | yes | medium |
 | interpolation_search    | yes    |   fast |
+
+`linear_search` is also reversable: `linear_search(array, x, reversed=True)`.
