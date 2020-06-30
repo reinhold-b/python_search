@@ -45,7 +45,7 @@ def binary_search(array, x):
 
 	#if the array does not contain strings we check whether it is sorted or not
 	else: 
-		if all(array[i] < array[i + 1] for i in range(len(array) - 1)):
+		if all(array[i] <= array[i + 1] for i in range(len(array) - 1)):
 			func_array = array
 		else:
 			raise Invalid_Array_Error("The given array has to be sorted.")
@@ -98,7 +98,7 @@ def jump_search(array, x):
 
 	#if the array does not contain strings we check whether it is sorted or not
 	else: 
-		if all(array[i] < array[i + 1] for i in range(len(array) - 1)):
+		if all(array[i] <= array[i + 1] for i in range(len(array) - 1)):
 			func_array = array
 		else:
 			raise Invalid_Array_Error("The given array has to be sorted.")
@@ -149,7 +149,7 @@ def interpolation_search(array, x):
 
 	#if the array does not contain strings we check whether it is sorted or not
 	else: 
-		if all(array[i] < array[i + 1] for i in range(len(array) - 1)):
+		if all(array[i] <= array[i + 1] for i in range(len(array) - 1)):
 			func_array = array
 		else:
 			raise Invalid_Array_Error("The given array has to be sorted.")
@@ -171,10 +171,10 @@ def interpolation_search(array, x):
 			if x == array[start_pos]:
 				return start_pos
 
-			elif array[mid] > x:
-				return search(array, x, low, start_pos - 1)
+			elif array[start_pos] > x:
+				return interpolation(array, x, low, start_pos - 1)
 			else:
-				return search(array, x, start_pos + 1, high)
+				return interpolation(array, x, start_pos + 1, high)
 
 		return None
 
