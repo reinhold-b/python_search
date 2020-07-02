@@ -122,7 +122,7 @@ def jump_search(array, x):
 		elif func_array[i] > x:
 			for index, element in enumerate(func_array[i - step_size: i]):
 				if element == x:
-					return index
+					return i - step_size + index
 	return None
 
 
