@@ -29,7 +29,7 @@ from pythonsearch.search import linear_search
 array_one = [8, 2, 9, 10, 34]
 
 #index of element 10
-index_10 = linear_search(array, 10)
+index_10 = linear_search(array_one, 10)
 
 print(index_10)
 
@@ -39,10 +39,10 @@ Output: `3`
 **Pythonsearch also works with strings:**
 
 ```
-array_two = ["Max", "Paul", "Mary, "Julia"]
+array_two = ["Max", "Paul", "Mary", "Julia"]
 
 #index of element "Julia"
-index_Julia = linear_search(array, "Julia")
+index_Julia = linear_search(array_two, "Julia")
 
 print(index_Julia)
 ```
